@@ -5,7 +5,8 @@ class SurveyWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         child: Expanded(
-      child: Column(children: [
+      child: Column(
+          children: [
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Row(
@@ -53,7 +54,7 @@ class _SurveyListState extends State<SurveyList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _buildSurvey(),
+      body: SizedBox(height: 350,child: _buildSurvey()),
     );
   }
 
@@ -76,9 +77,11 @@ class _SurveyListState extends State<SurveyList> {
                 child: Container(
                   child: Center(
                       child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Padding(
-                        padding: EdgeInsets.all(20.0),
+                        padding: EdgeInsets.all(2.0),
                         child: Text(
                           _rating_emoji[i].toString(),
                           style: TextStyle(fontSize: 70.0),
